@@ -1,0 +1,33 @@
+oil=110
+biscuit=20
+maggi=30 
+wheat=90
+bread=50
+cname=input('enter customer name:')
+cphno=input('enter customer phone no:')
+oilq=int(input('enter no of oil packets:'))
+biscuitq=int(input('enter no of biscuit packets:'))
+maggiq=int(input('enter no of maggi packets:'))
+wheatq=int(input('enter no of wheat packets:'))
+breadq=int(input('enter no of bread packets:'))
+bill=(oil*oilq)+(biscuit*biscuitq)+(maggi*maggiq)+(wheat*wheatq)+(bread*breadq)
+if bill>5000:
+    disc=bill*10/100
+    tax=bill*10/100
+elif bill>3000:
+    disc=bill*8/100
+    tax=bill*10/100
+elif bill>2000:
+    disc=bill*5/100
+    tax=bill*18/100   
+elif bill>1000:
+    disc=bill*3/100
+    tax=bill*18/100 
+else:
+    print('there is no tax and discount available on this bill')
+    disc=0
+    tax=0
+mainbill=bill-disc+tax
+print('bill amount:',mainbill)
+    
+    
